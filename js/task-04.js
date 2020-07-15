@@ -1,12 +1,6 @@
 "use strict";
 const formatString = function (string) {
-  let words = string.split("");
-
-  if (words.length <= 40) {
-    return string;
-  }
-
-  return string.slice(0, 40) + "...";
+  return string.length <= 40 ? string : `${string.slice(0, 40)}...`;
 };
 
 /*
